@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventHive — Browse Events</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="page-nav">
+    <a href="index.html" class="page-nav-logo">
+      <div class="logo-hex-sm">🐝</div>
+      Event<span>Hive</span>
+    </a>
+    <div class="page-nav-links">
+      <a href="events.html">Events</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="profile.html">My Profile</a>
+      <a href="login.html" class="nav-pill">Login</a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="events-page-header">
+    <h1>Browse <span>Events</span></h1>
+    <p>Discover hackathons, tech fests, and workshops happening across India.</p>
+  </div>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <input class="filter-search" type="text" placeholder="🔍  Search events, colleges..."/>
+    <div class="filter-chips">
+      <span class="chip active" onclick="filterChip(this)">All</span>
+      <span class="chip" onclick="filterChip(this)">⚡ Hackathon</span>
+      <span class="chip" onclick="filterChip(this)">🖥 Tech Fest</span>
+      <span class="chip" onclick="filterChip(this)">🤖 Workshop</span>
+      <span class="chip" onclick="filterChip(this)">🟢 Open Now</span>
+      <span class="chip" onclick="filterChip(this)">👥 Team Events</span>
+    </div>
+    <span class="filter-count">Showing 4 events</span>
+  </div>
+
+  <!-- Body -->
+  <div class="events-page-body">
+
+    <!-- Featured -->
+    <div class="featured-banner reveal">
+      <div>
+        <div class="featured-label">⭐ Featured Event</div>
+        <h2>HackSphere 2025</h2>
+        <p>The biggest student hackathon of the year. Build. Ship. Win.</p>
+        <div class="featured-meta">
+          <div class="featured-meta-item">📍 NIT Amritsar</div>
+          <div class="featured-meta-item">📅 March 22–23</div>
+          <div class="featured-meta-item">👥 Teams of 3–5</div>
+          <div class="featured-meta-item" style="color:var(--amber)">54 seats left</div>
+        </div>
+      </div>
+      <a href="event-detail.html" class="btn-primary">View & Register →</a>
+    </div>
+
+    <!-- Grid -->
+    <div class="events-page-grid">
+
+      <!-- Card 1 -->
+      <div class="ev-card reveal">
+        <div class="ev-banner amber"></div>
+        <div class="ev-body">
+          <div class="ev-type-row">
+            <span class="ev-type">⚡ Hackathon</span>
+            <span class="ev-deadline">3 days left</span>
+          </div>
+          <div class="ev-name">HackSphere 2025</div>
+          <div class="ev-org">NIT Amritsar, Punjab</div>
+          <div class="ev-meta-grid">
+            <div class="ev-meta-item">📅 Mar 22–23, 2025</div>
+            <div class="ev-meta-item">👥 Teams of 3–5</div>
+            <div class="ev-meta-item">🏆 ₹1,00,000 prize</div>
+            <div class="ev-meta-item">📍 On-site</div>
+          </div>
+          <p class="ev-desc">48-hour hackathon focused on AI/ML, FinTech, and sustainability solutions. Open to all undergrads.</p>
+          <div class="ev-tags">
+            <span class="ev-tag">AI/ML</span>
+            <span class="ev-tag">FinTech</span>
+            <span class="ev-tag">Open Source</span>
+          </div>
+        </div>
+        <div class="ev-footer">
+          <div class="ev-seats-bar">
+            <div class="ev-seats-text">
+              <span>146 registered</span>
+              <span class="count">54 left</span>
+            </div>
+            <div class="ev-seats-track"><div class="ev-seats-fill" style="width:73%"></div></div>
+          </div>
+          <a href="event-detail.html" class="ev-register-btn">Register →</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="ev-card reveal">
+        <div class="ev-banner indigo"></div>
+        <div class="ev-body">
+          <div class="ev-type-row">
+            <span class="ev-type" style="color:#818cf8;">🖥 Tech Fest</span>
+            <span class="ev-deadline safe">18 days left</span>
+          </div>
+          <div class="ev-name">TechnoVerse '25</div>
+          <div class="ev-org">Panjab University, Chandigarh</div>
+          <div class="ev-meta-grid">
+            <div class="ev-meta-item">📅 Apr 5–7, 2025</div>
+            <div class="ev-meta-item">👤 Solo & Teams</div>
+            <div class="ev-meta-item">🎯 10+ events</div>
+            <div class="ev-meta-item">📍 On-site</div>
+          </div>
+          <p class="ev-desc">Multi-event technical fest including coding contests, robotics, UI/UX, and more.</p>
+          <div class="ev-tags">
+            <span class="ev-tag">Coding</span>
+            <span class="ev-tag">Robotics</span>
+            <span class="ev-tag">UI/UX</span>
+          </div>
+        </div>
+        <div class="ev-footer">
+          <div class="ev-seats-bar">
+            <div class="ev-seats-text">
+              <span>80 registered</span>
+              <span class="count">220 left</span>
+            </div>
+            <div class="ev-seats-track"><div class="ev-seats-fill" style="width:27%;background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div></div>
+          </div>
+          <a href="event-detail.html" class="ev-register-btn" style="background:#6366f1;color:#fff;">Register →</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="ev-card reveal">
+        <div class="ev-banner teal"></div>
+        <div class="ev-body">
+          <div class="ev-type-row">
+            <span class="ev-type" style="color:#14b8a6;">🤖 Workshop</span>
+            <span class="ev-deadline">8 days left</span>
+          </div>
+          <div class="ev-name">ML Bootcamp: Zero to One</div>
+          <div class="ev-org">IIT Ropar (Online)</div>
+          <div class="ev-meta-grid">
+            <div class="ev-meta-item">📅 Mar 30, 2025</div>
+            <div class="ev-meta-item">👤 Individual</div>
+            <div class="ev-meta-item">⏱ 1-day intensive</div>
+            <div class="ev-meta-item">🌐 Online</div>
+          </div>
+          <p class="ev-desc">Hands-on ML workshop covering Python, sklearn, and model deployment. Certificate provided.</p>
+          <div class="ev-tags">
+            <span class="ev-tag">Python</span>
+            <span class="ev-tag">ML</span>
+            <span class="ev-tag">Certificate</span>
+          </div>
+        </div>
+        <div class="ev-footer">
+          <div class="ev-seats-bar">
+            <div class="ev-seats-text">
+              <span>82 registered</span>
+              <span class="count">18 left</span>
+            </div>
+            <div class="ev-seats-track"><div class="ev-seats-fill" style="width:82%;background:linear-gradient(90deg,#14b8a6,#06b6d4)"></div></div>
+          </div>
+          <a href="event-detail.html" class="ev-register-btn" style="background:#14b8a6;color:#fff;">Register →</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="ev-card reveal">
+        <div class="ev-banner rose"></div>
+        <div class="ev-body">
+          <div class="ev-type-row">
+            <span class="ev-type" style="color:#f43f5e;">🎯 Competitive</span>
+            <span class="ev-deadline" style="background:rgba(100,100,100,0.1);color:var(--muted);border-color:var(--border)">Closed</span>
+          </div>
+          <div class="ev-name">CodeSprint Winter 2024</div>
+          <div class="ev-org">THAPAR University, Patiala</div>
+          <div class="ev-meta-grid">
+            <div class="ev-meta-item">📅 Dec 15, 2024</div>
+            <div class="ev-meta-item">👥 Teams of 2</div>
+            <div class="ev-meta-item">⚡ 3-hour sprint</div>
+            <div class="ev-meta-item">📍 On-site</div>
+          </div>
+          <p class="ev-desc">Competitive coding sprint — 10 problems, 3 hours, top prizes for speed and accuracy.</p>
+          <div class="ev-tags">
+            <span class="ev-tag">DSA</span>
+            <span class="ev-tag">Competitive</span>
+          </div>
+        </div>
+        <div class="ev-footer">
+          <div class="ev-seats-bar">
+            <div class="ev-seats-text">
+              <span>150 registered</span>
+              <span class="count" style="color:var(--muted)">Full</span>
+            </div>
+            <div class="ev-seats-track"><div class="ev-seats-fill" style="width:100%;background:#555"></div></div>
+          </div>
+          <a href="#" class="ev-register-btn full">Closed</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

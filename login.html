@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventHive — Login / Register</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="auth-page">
+
+  <!-- Left Branding Panel -->
+  <div class="auth-left">
+    <a href="index.html" class="auth-left-logo">
+      <div class="logo-hex">🐝</div>
+      Event<span>Hive</span>
+    </a>
+
+    <div class="auth-left-content">
+      <h2>Join thousands of<br><span>campus events</span><br>happening now.</h2>
+      <p>Register once. Access hackathons, fests, and workshops across 200+ institutions.</p>
+    </div>
+
+    <div class="auth-features">
+      <div class="auth-feature-item">
+        <div class="icon">⚡</div>
+        Instant registration confirmation
+      </div>
+      <div class="auth-feature-item">
+        <div class="icon">👥</div>
+        Solo or team-based participation
+      </div>
+      <div class="auth-feature-item">
+        <div class="icon">📊</div>
+        Real-time event seat tracking
+      </div>
+      <div class="auth-feature-item">
+        <div class="icon">🔐</div>
+        Secure JWT-based authentication
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Form Panel -->
+  <div class="auth-right">
+    <div class="auth-box">
+      <h1 id="form-title">Welcome back</h1>
+      <p class="sub" id="form-sub">Sign in to your EventHive account</p>
+
+      <!-- Tabs -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" onclick="switchTab('login')">Login</button>
+        <button class="auth-tab" onclick="switchTab('register')">Register</button>
+      </div>
+
+      <!-- LOGIN PANEL -->
+      <div class="panel active" id="panel-login">
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@college.edu"/>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password"/>
+        </div>
+        <div style="display:flex;justify-content:flex-end;">
+          <a href="#" style="font-size:0.8rem;color:var(--amber);text-decoration:none;">Forgot password?</a>
+        </div>
+        <button class="form-submit">Sign In →</button>
+        <div class="form-footer">
+          Don't have an account? <a href="#" onclick="switchTab('register')">Register here</a>
+        </div>
+      </div>
+
+      <!-- REGISTER PANEL -->
+      <div class="panel" id="panel-register">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder=" "/>
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder=" "/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@college.edu"/>
+        </div>
+        <div class="form-group">
+          <label>College / Institution</label>
+          <input type="text" placeholder=" "/>
+        </div>
+        <div class="form-group">
+          <label>Role</label>
+          <select>
+            <option value="">Select your role</option>
+            <option value="participant">Participant</option>
+            <option value="organizer">Organizer / Admin</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Create a strong password"/>
+          <span class="input-hint">Minimum 8 characters</span>
+        </div>
+        <button class="form-submit">Create Account →</button>
+        <div class="form-footer">
+          Already have an account? <a href="#" onclick="switchTab('login')">Login here</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

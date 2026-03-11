@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventHive — Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="app-layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <a href="index.html" class="sidebar-logo">
+      <div class="logo-hex">🐝</div>
+      Event<span>Hive</span>
+    </a>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Main</div>
+      <a class="nav-item active" href="dashboard.html">
+        <span class="nav-icon">📊</span> Dashboard
+      </a>
+      <a class="nav-item" href="events.html">
+        <span class="nav-icon">📅</span> All Events
+        <span class="nav-badge">3</span>
+      </a>
+      <a class="nav-item" href="#">
+        <span class="nav-icon">👥</span> Registrations
+      </a>
+      <a class="nav-item" href="#">
+        <span class="nav-icon">📤</span> Export Data
+      </a>
+
+      <div class="nav-section-label">Settings</div>
+      <a class="nav-item" href="#">
+        <span class="nav-icon">🔐</span> Access Control
+      </a>
+      <a class="nav-item" href="#">
+        <span class="nav-icon">⚙️</span> Settings
+      </a>
+      <a class="nav-item" href="login.html">
+        <span class="nav-icon">🚪</span> Logout
+      </a>
+    </nav>
+
+    <div class="sidebar-user">
+      <div class="user-avatar">K</div>
+      <div class="user-info">
+        <div class="user-name">Komal</div>
+        <div class="user-role">Admin</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main-content">
+
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="topbar-title">Dashboard</div>
+      <div class="topbar-actions">
+        <input class="topbar-search" type="text" placeholder="🔍  Search events..."/>
+        <button class="topbar-btn">+ Create Event</button>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="page-body">
+
+      <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-card-label">Total Events</div>
+          <div class="stat-card-val">12</div>
+          <div class="stat-card-change">↑ 3 this month</div>
+          <div class="stat-card-icon">📅</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">Registrations</div>
+          <div class="stat-card-val">1,248</div>
+          <div class="stat-card-change">↑ 18% vs last month</div>
+          <div class="stat-card-icon">👥</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">Active Events</div>
+          <div class="stat-card-val">3</div>
+          <div class="stat-card-change">Live right now</div>
+          <div class="stat-card-icon">⚡</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">Teams Formed</div>
+          <div class="stat-card-val">284</div>
+          <div class="stat-card-change">↑ 42 new teams</div>
+          <div class="stat-card-icon">🏆</div>
+        </div>
+      </div>
+
+      <!-- Grid -->
+      <div class="dashboard-grid">
+
+        <!-- Events Table -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Your Events</div>
+            <a href="events.html" class="card-action">View all →</a>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Event</th>
+                <th>Type</th>
+                <th>Registrations</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="event-name-cell">HackSphere 2025</td>
+                <td><span class="event-type-tag tag-hackathon">Hackathon</span></td>
+                <td>
+                  <div>146 / 200</div>
+                  <div class="mini-bar"><div class="mini-bar-fill" style="width:73%"></div></div>
+                </td>
+                <td><span class="status-pill status-live">● Live</span></td>
+                <td>
+                  <div class="table-actions">
+                    <button class="tbl-btn">View</button>
+                    <button class="tbl-btn primary">Edit</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="event-name-cell">TechnoVerse '25</td>
+                <td><span class="event-type-tag tag-fest">Tech Fest</span></td>
+                <td>
+                  <div>80 / 300</div>
+                  <div class="mini-bar"><div class="mini-bar-fill" style="width:27%"></div></div>
+                </td>
+                <td><span class="status-pill status-upcoming">Upcoming</span></td>
+                <td>
+                  <div class="table-actions">
+                    <button class="tbl-btn">View</button>
+                    <button class="tbl-btn primary">Edit</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="event-name-cell">ML Bootcamp</td>
+                <td><span class="event-type-tag tag-workshop">Workshop</span></td>
+                <td>
+                  <div>82 / 100</div>
+                  <div class="mini-bar"><div class="mini-bar-fill" style="width:82%"></div></div>
+                </td>
+                <td><span class="status-pill status-live">● Live</span></td>
+                <td>
+                  <div class="table-actions">
+                    <button class="tbl-btn">View</button>
+                    <button class="tbl-btn primary">Edit</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="event-name-cell">CodeSprint Winter</td>
+                <td><span class="event-type-tag tag-hackathon">Hackathon</span></td>
+                <td>
+                  <div>150 / 150</div>
+                  <div class="mini-bar"><div class="mini-bar-fill" style="width:100%"></div></div>
+                </td>
+                <td><span class="status-pill status-closed">Closed</span></td>
+                <td>
+                  <div class="table-actions">
+                    <button class="tbl-btn">View</button>
+                    <button class="tbl-btn">Export</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="panel-stack">
+
+          <!-- Recent Activity -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Recent Activity</div>
+            </div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-dot green"></div>
+                <div>
+                  <div class="activity-text"><strong>ByteForce</strong> registered for HackSphere</div>
+                  <div class="activity-time">2 minutes ago</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot amber"></div>
+                <div>
+                  <div class="activity-text"><strong>Priya Nair</strong> joined ML Bootcamp</div>
+                  <div class="activity-time">14 minutes ago</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot blue"></div>
+                <div>
+                  <div class="activity-text"><strong>TechnoVerse</strong> event was updated</div>
+                  <div class="activity-time">1 hour ago</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot green"></div>
+                <div>
+                  <div class="activity-text"><strong>NullPointers</strong> registered for HackSphere</div>
+                  <div class="activity-time">2 hours ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">HackSphere — Quick Stats</div>
+            </div>
+            <div class="quick-stats">
+              <div class="qs-row">
+                <span class="qs-label">Deadline</span>
+                <span class="qs-val">March 20, 2025</span>
+              </div>
+              <div class="qs-row">
+                <span class="qs-label">Team Size</span>
+                <span class="qs-val">3 – 5 members</span>
+              </div>
+              <div class="qs-row">
+                <span class="qs-label">Teams Registered</span>
+                <span class="qs-val">32 teams</span>
+              </div>
+              <div class="qs-row">
+                <span class="qs-label">Seats Remaining</span>
+                <span class="qs-val" style="color:var(--amber)">54 left</span>
+              </div>
+              <div style="margin-top:0.5rem;">
+                <button style="width:100%;background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:7px;padding:0.6rem;font-family:'Syne',sans-serif;font-weight:700;font-size:0.8rem;cursor:pointer;transition:all 0.2s;"
+                  onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--amber)'"
+                  onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">
+                  📤 Export Participant List
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

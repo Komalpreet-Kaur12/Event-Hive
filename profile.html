@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventHive — My Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="page-nav">
+    <a href="index.html" class="page-nav-logo">
+      <div class="logo-hex-sm">🐝</div>
+      Event<span>Hive</span>
+    </a>
+    <div class="page-nav-links">
+      <a href="events.html">Browse Events</a>
+      <a href="profile.html" class="active">My Profile</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </nav>
+
+  <!-- Profile Header -->
+  <div class="profile-header">
+    <div class="profile-header-inner">
+      <div class="profile-avatar-lg">K</div>
+      <div class="profile-info">
+        <h1>Komal</h1>
+        <div class="college">Chitkara University · B.Tech CSE, 2nd Year</div>
+        <div class="profile-tags">
+          <span class="profile-tag tag-participant">🎓 Participant</span>
+          <span class="profile-tag tag-verified">✔ Verified</span>
+        </div>
+      </div>
+      <div class="profile-header-stats">
+        <div class="ph-stat">
+          <div class="ph-stat-num">3</div>
+          <div class="ph-stat-label">Events Joined</div>
+        </div>
+        <div class="ph-stat">
+          <div class="ph-stat-num">2</div>
+          <div class="ph-stat-label">Teams Formed</div>
+        </div>
+        <div class="ph-stat">
+          <div class="ph-stat-num">1</div>
+          <div class="ph-stat-label">Awards Won</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="profile-tabs">
+    <button class="profile-tab active" onclick="switchProfileTab(this, 'registrations')">My Registrations</button>
+    <button class="profile-tab" onclick="switchProfileTab(this, 'teams')">My Teams</button>
+    <button class="profile-tab" onclick="switchProfileTab(this, 'settings')">Settings</button>
+  </div>
+
+  <!-- Body -->
+  <div class="profile-body">
+
+    <!-- Left: Registrations -->
+    <div>
+      <!-- REGISTRATIONS TAB -->
+      <div id="tab-registrations">
+        <div class="reg-list">
+
+          <!-- Registration 1 -->
+          <div class="reg-item reveal">
+            <div class="reg-item-header">
+              <div class="reg-item-left">
+                <div class="reg-item-icon icon-amber">⚡</div>
+                <div>
+                  <div class="reg-item-name">HackSphere 2025</div>
+                  <div class="reg-item-org">Chitkara University · Hackathon</div>
+                </div>
+              </div>
+              <span class="status-badge badge-confirmed">● Confirmed</span>
+            </div>
+            <div class="reg-item-body">
+              <div class="reg-detail">
+                <div class="reg-detail-label">Date</div>
+                <div class="reg-detail-val">March 22–23, 2025</div>
+              </div>
+              <div class="reg-detail">
+                <div class="reg-detail-label">Team</div>
+                <div class="reg-detail-val">ByteForce (4 members)</div>
+              </div>
+              <div class="reg-detail">
+                <div class="reg-detail-label">Reg. ID</div>
+                <div class="reg-detail-val" style="color:var(--amber)">#EH-2025-4821</div>
+              </div>
+            </div>
+            <div class="reg-item-footer">
+              <a href="event-detail.html" class="reg-action-btn">View Event</a>
+              <button class="reg-action-btn">Edit Team</button>
+              <button class="reg-action-btn primary">📥 Download Ticket</button>
+            </div>
+          </div>
+
+          <!-- Registration 2 -->
+          <div class="reg-item reveal">
+            <div class="reg-item-header">
+              <div class="reg-item-left">
+                <div class="reg-item-icon icon-teal">🤖</div>
+                <div>
+                  <div class="reg-item-name">ML Bootcamp: Zero to One</div>
+                  <div class="reg-item-org">IIT Ropar · Workshop</div>
+                </div>
+              </div>
+              <span class="status-badge badge-confirmed">● Confirmed</span>
+            </div>
+            <div class="reg-item-body">
+              <div class="reg-detail">
+                <div class="reg-detail-label">Date</div>
+                <div class="reg-detail-val">March 30, 2025</div>
+              </div>
+              <div class="reg-detail">
+                <div class="reg-detail-label">Type</div>
+                <div class="reg-detail-val">Individual · Online</div>
+              </div>
+              <div class="reg-detail">
+                <div class="reg-detail-label">Reg. ID</div>
+                <div class="reg-detail-val" style="color:var(--amber)">#EH-2025-4830</div>
+              </div>
+            </div>
+            <div class="reg-item-footer">
+              <a href="event-detail.html" class="reg-action-btn">View Event</a>
+              <button class="reg-action-btn primary">📥 Download Ticket</button>
+            </div>
+          </div>
+
+          <!-- Registration 3 (past) -->
+          <div class="reg-item reveal">
+            <div class="reg-item-header">
+              <div class="reg-item-left">
+                <div class="reg-item-icon icon-indigo">🎯</div>
+                <div>
+                  <div class="reg-item-name">CodeSprint Winter 2024</div>
+                  <div class="reg-item-org">Thapar University · Hackathon</div>
+                </div>
+              </div>
+              <span class="status-badge badge-closed">Completed</span>
+            </div>
+            <div class="reg-item-body">
+              <div class="reg-detail">
+                <div class="reg-detail-label">Date</div>
+                <div class="reg-detail-val">December 15, 2024</div>
+              </div>
+              <div class="reg-detail">
+                <div class="reg-detail-label">Result</div>
+                <div class="reg-detail-val" style="color:#22c55e">🏆 2nd Place</div>
+              </div>
+              <div class="reg-detail">
+                <div class="reg-detail-label">Team</div>
+                <div class="reg-detail-val">ByteForce (2 members)</div>
+              </div>
+            </div>
+            <div class="reg-item-footer">
+              <a href="event-detail.html" class="reg-action-btn">View Event</a>
+              <button class="reg-action-btn primary">🎖 View Certificate</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TEAMS TAB (hidden) -->
+      <div id="tab-teams" style="display:none;">
+        <div style="color:var(--muted);font-size:0.9rem;padding:2rem 0;">
+          Team management coming soon. You are currently part of <strong style="color:var(--text)">ByteForce</strong>.
+        </div>
+      </div>
+
+      <!-- SETTINGS TAB (hidden) -->
+      <div id="tab-settings" style="display:none;">
+        <div style="color:var(--muted);font-size:0.9rem;padding:2rem 0;">
+          Account settings will be available here. You can update your name, email, college, and password.
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="profile-sidebar">
+
+      <!-- Profile Info -->
+      <div class="info-card reveal">
+        <div class="info-card-header">
+          Profile Info
+          <span class="info-card-edit">Edit ✏️</span>
+        </div>
+        <div class="info-card-body">
+          <div class="info-row">
+            <div class="info-row-label">Full Name</div>
+            <div class="info-row-val">Komal</div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-label">Email</div>
+            <div class="info-row-val">komal@chitkara.edu.in</div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-label">Institution</div>
+            <div class="info-row-val">Chitkara University</div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-label">Course</div>
+            <div class="info-row-val">B.Tech CSE · 2nd Year</div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-label">Member Since</div>
+            <div class="info-row-val">January 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievements -->
+      <div class="info-card reveal">
+        <div class="info-card-header">Achievements</div>
+        <div class="achievement-list">
+          <div class="achievement-item">
+            <div class="ach-icon">🏆</div>
+            <div>
+              <div class="ach-title">CodeSprint 2nd Place</div>
+              <div class="ach-desc">December 2024 · Thapar University</div>
+            </div>
+          </div>
+          <div class="achievement-item">
+            <div class="ach-icon">🎖</div>
+            <div>
+              <div class="ach-title">Early Registrant</div>
+              <div class="ach-desc">Registered within 24h of launch</div>
+            </div>
+          </div>
+          <div class="achievement-item">
+            <div class="ach-icon">👥</div>
+            <div>
+              <div class="ach-title">Team Leader</div>
+              <div class="ach-desc">Led ByteForce in 2 events</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Browse More -->
+      <a href="events.html" class="btn-primary" style="justify-content:center;">🔍 Browse More Events</a>
+
+    </div>
+  </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
